@@ -1,0 +1,33 @@
+name: wax-fifo-cost-basis-calculator
+trust_label: educational-reference
+version: 0.1.0
+purpose: >
+  Educational First-In, First-Out matcher for a client-side WAX trade ledger.
+  Not tax advice. Live history parsing is not part of the verified surface.
+invariants:
+  - Disposals consume the oldest open lot of the same asset key first.
+  - Equal timestamps are ordered by event id ascending.
+  - Assets never share a lot queue.
+  - Unmatched disposal quantity is warned and excluded from realized gain.
+  - Default policy ignores role=transfer and excludes mints with unitPrice 0.
+  - The engine does not read the network or a wallet.
+do_not:
+  - Do not describe the output as a tax filing.
+  - Do not label average-cost math as FIFO.
+  - Do not mark Hyperion integration verified until a fixture response is stored.
+  - Do not silently assign zero basis.
+entrypoints:
+  logic: examples/fifo.ts
+  types: examples/types.ts
+  fixtures: examples/fixtures.ts
+  tests: examples/fifo.test.ts
+  demo: examples/Demo.tsx
+commands:
+  test: npm test
+  typecheck: npm run typecheck
+  demo: npm run dev
+live_data:
+  status: untested
+  notes: >
+    Map Hyperion get_actions into LedgerEvent outside the engine.
+    Suggested hosts are examples only until a smoke test is logged.

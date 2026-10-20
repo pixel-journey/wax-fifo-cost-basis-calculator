@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light;
+  --ink: #1c1914;
+  --paper: #f6f1e7;
+  --rule: #d9d0c1;
+  --gain: #1f6b45;
+  --warn: #8a4b12;
+  --accent: #204e3a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+
+.kicker {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: var(--warn);
+}
+
+h1 { font-size: 2.4rem; line-height: 1.05; margin: 0.2rem 0 0.6rem; }
+
+.lede { font-size: 1.1rem; max-width: 62ch; }
+
+.policy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: flex-end;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+
+label { display: grid; gap: 0.35rem; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.85rem; }
+
+select { font: inherit; padding: 0.4rem 0.5rem; background: white; color: var(--ink); }
+
+.total { margin-left: auto; font-size: 1.15rem; }
+.total strong { color: var(--gain); font-variant-numeric: tabular-nums; }
+
+.gain { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.9rem; color: var(--gain); }
+
+table { width: 100%; border-collapse: collapse; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.88rem; }
+caption { text-align: left; margin-bottom: 0.5rem; }
+th, td { text-align: left; padding: 0.4rem 0.45rem; border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+th { font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.table-scroll { overflow-x: auto; }
+
+pre {
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 0.8rem;
+  overflow-x: auto;
+  font-size: 0.8rem;
+}
+
+a { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; }
+}
