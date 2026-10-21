@@ -17,11 +17,11 @@ do_not:
   - Do not mark Hyperion integration verified until a fixture response is stored.
   - Do not silently assign zero basis.
 entrypoints:
-  logic: examples/fifo.ts
-  types: examples/types.ts
-  fixtures: examples/fixtures.ts
-  tests: examples/fifo.test.ts
-  demo: examples/Demo.tsx
+  logic: src/fifo.ts
+  types: src/types.ts
+  fixtures: src/fixtures.ts
+  tests: src/fifo.test.ts
+  demo: src/Demo.tsx
 commands:
   test: npm test
   typecheck: npm run typecheck

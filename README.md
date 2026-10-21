@@ -33,7 +33,7 @@ npm test
 npm run dev
 ```
 
-The dev server renders `examples/fixtures.ts`. No wallet and no network are required.
+The dev server renders `src/fixtures.ts`. No wallet and no network are required.
 
 ## Why this exists
 
@@ -64,7 +64,7 @@ Quantities are converted to micro-units (`1e-6`) before matching so `0.5` and `1
 **Advanced.** Pass a policy:
 
 ```ts
-import { runFifo } from "./examples/fifo";
+import { runFifo } from "./src/fifo";
 
 const result = runFifo(events, {
   transfer: "dispose", // only if you truly want transfers to realize
@@ -85,11 +85,11 @@ const result = runFifo(events, {
 
 Toggle the two policy controls to see the warnings change. That toggle is the teaching point.
 
-Mock data lives in [examples/fixtures.ts](examples/fixtures.ts). The `alien.worlds:123` key is an **illustrative id**, not a claim about a specific mint.
+Mock data lives in [src/fixtures.ts](src/fixtures.ts). The `alien.worlds:123` key is an **illustrative id**, not a claim about a specific mint.
 
 ## Integration
 
-1. Normalize indexer rows into `LedgerEvent` **before** calling `runFifo`. Do the I/O outside `examples/fifo.ts`.
+1. Normalize indexer rows into `LedgerEvent` **before** calling `runFifo`. Do the I/O outside `src/fifo.ts`.
 2. Pick asset keys up front. Fungible WAX and an NFT template must not share a queue.
 3. Decide transfer and mint policy with the user. Persist the policy next to the report.
 4. Render warnings. A blank gain figure with hidden unmatched quantity is worse than no tool.
@@ -146,7 +146,7 @@ FIFO itself is chain-agnostic. What changes on another Antelope chain is the **m
 
 | Claim | State |
 | --- | --- |
-| Sample WAX sale realizes 10 and leaves the newer lot | Covered by `examples/fifo.test.ts` |
+| Sample WAX sale realizes 10 and leaves the newer lot | Covered by `src/fifo.test.ts` |
 | Default policy skips the sample transfer and zero mint | Covered by tests |
 | `npm run dev` works offline | Local UI, no network |
 | Live Hyperion mapping | **Untested** |
@@ -162,3 +162,10 @@ FIFO itself is chain-agnostic. What changes on another Antelope chain is the **m
 ## License
 
 MIT. Built for the WAX and Antelope educational catalog.
+
+
+## Queries and unsigned transactions
+
+`src/api.ts` builds the HTTP requests. `src/usecases.ts` is the worked case for this repo: those requests, and the unsigned transaction when the feature actually has an action. `executed` is false. Nothing is sent.
+
+The engines used to sit in `examples/`. GitHub treats that directory as documentation, so the language bar showed the stylesheet and almost none of the TypeScript.

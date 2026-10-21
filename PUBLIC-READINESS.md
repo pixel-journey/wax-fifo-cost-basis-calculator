@@ -19,7 +19,7 @@ Checked 2026-10-20 against the catalog rubric. This repo stays private.
 - [x] `spec.yaml`
 - [x] `ARCHITECTURE.md`
 - [x] Pure logic separated from I/O
-- [x] `examples/fifo.test.ts` with assertions
+- [x] `src/fifo.test.ts` with assertions
 - [x] Best practices and anti-patterns
 - [x] Edge cases
 - [x] Antelope notes

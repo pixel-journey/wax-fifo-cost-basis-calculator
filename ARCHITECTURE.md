@@ -14,10 +14,10 @@ LedgerEvent[]  -->  applyPolicy  -->  per-asset queues  -->  FifoResult
 
 | Piece | Role |
 | --- | --- |
-| `examples/types.ts` | The ledger vocabulary. No I/O. |
-| `examples/fifo.ts` | Ordering, policy, matching, CSV. Pure. |
-| `examples/fixtures.ts` | The only numbers the demo is allowed to treat as known. |
-| `examples/Demo.tsx` | Renders the engine. It does not reimplement FIFO. |
+| `src/types.ts` | The ledger vocabulary. No I/O. |
+| `src/fifo.ts` | Ordering, policy, matching, CSV. Pure. |
+| `src/fixtures.ts` | The only numbers the demo is allowed to treat as known. |
+| `src/Demo.tsx` | Renders the engine. It does not reimplement FIFO. |
 | `app/` | Next.js shell so `npm run dev` is the handbook’s quick start. |
 
 ## Decisions
