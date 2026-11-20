@@ -1,12 +1,13 @@
 # wax-fifo-cost-basis-calculator
 
 **Trust label:** `educational-reference`  
-**Status:** Private. Gate 0 and Gate 1 for the pure engine. Live Hyperion parsing is not verified.  
-**Not tax, legal, or accounting advice.**
+**Status:** The course is [EDUCATION.md](EDUCATION.md). `npm test` locks the lot matches. Live Hyperion parsing is not verified.  
+**Not tax, legal, or accounting advice.**  
+**Catalog:** `wax-ecosystem-blueprint-catalog` (private index; not this public course)
 
 One-sentence goal: show how First-In, First-Out matching turns a sorted WAX trade ledger into auditable lot consumption, open lots, and realized gain — entirely on the client, with policy flags instead of silent assumptions.
 
-Parent catalog: [pixel-journey/wax-ecosystem-blueprint-catalog](https://github.com/pixel-journey/wax-ecosystem-blueprint-catalog)
+Parent catalog: `wax-ecosystem-blueprint-catalog` (private index; not this public course)
 
 ## Contents
 
